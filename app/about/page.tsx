@@ -1,8 +1,8 @@
 import { getSEO } from "@/lib/seo";
 import { Container } from "@/components/container";
-import { Header } from "@/components/header";
 import { Button } from "@/components/button";
 import { FlipWordsDemo } from "@/components/about/flip-words-demo";
+import { TeamSectionWithScales } from "@/components/about/team-section-with-scales";
 import { HeroShell } from "@/components/hero/hero-shell";
 import { InlineIllustrationIcon } from "@/components/about/inline-illustration-icon";
 import { cn } from "@/lib/utils";
@@ -68,17 +68,9 @@ const AboutPage = () => {
           </div>
         </Container>
       </HeroShell>
-      <Container className="flex flex-col gap-16 pb-20 md:pb-30">
+      <Container className="flex flex-col gap-16 pb-16">
+        <TeamSectionWithScales />
         <FlipWordsDemo />
-
-        <div className="flex max-w-3xl flex-col gap-6">
-          <Header>Canadian-Owned</Header>
-          <p className="-tracking-xs text-base leading-7 font-medium text-muted-foreground">
-            We are Canadian-owned and operated. When you work with us, your money
-            stays in Canada and your website is built by someone who understands
-            the market you work in.
-          </p>
-        </div>
 
         <div>
           <Button text="Start Your Project" />

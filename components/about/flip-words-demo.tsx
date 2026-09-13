@@ -2,18 +2,19 @@
 
 import { FlipWords } from "@/components/ui/flip-words";
 
+const FLIP_WORDS = ["local", "trusted", "grounded", "familiar"];
+
 export function FlipWordsDemo() {
-  const words = ["better", "cute", "beautiful", "modern"];
 
   return (
     <div className="max-w-3xl">
       <div className="text-heading -tracking-xs text-4xl font-semibold tracking-tight text-balance md:text-5xl">
-        Build{" "}
-        <span className="relative inline-block align-baseline">
-          <FlipWords words={words} className="text-dusty-green" />
+        Websites built with a{" "}
+        <span className="relative inline-block min-w-[9.5ch] align-baseline">
+          <FlipWords words={FLIP_WORDS} className="!text-dusty-green" />
         </span>{" "}
         <br />
-        websites with Aceternity UI
+        understanding of your market
       </div>
     </div>
   );
