@@ -104,19 +104,13 @@ export const Footer = () => {
               </span>
             </div>
             <div className="flex items-center gap-5">
-              <Link href={"https://x.com/aceternitylabs"} target="_blank">
+              <Link href="#">
                 <XformerlyTwitter className="text-muted-foreground hover:text-natural-white size-4 transition-colors" />
               </Link>
-              <Link
-                href={"https://www.linkedin.com/company/aceternity"}
-                target="_blank"
-              >
+              <Link href="#">
                 <LinkedIn className="text-muted-foreground hover:text-natural-white size-4 transition-colors" />
               </Link>
-              <Link
-                href={"https://www.instagram.com/aceternity/"}
-                target="_blank"
-              >
+              <Link href="#">
                 <Instagram className="text-muted-foreground hover:text-natural-white size-4 transition-colors" />
               </Link>
             </div>

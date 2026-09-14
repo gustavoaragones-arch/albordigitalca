@@ -1,11 +1,34 @@
 "use client";
 
-import {
-  IconBrandFigma,
-  IconBrandSlack,
-  IconBrandStripe,
-  IconBrandVscode,
-} from "@tabler/icons-react";
+import { SiteIcon } from "@/components/ui/site-icon";
+
+const items = [
+  {
+    icon: "graph-up",
+    label: "Marketing consulting",
+    className: "text-dusty-red",
+  },
+  {
+    icon: "multi-bubble",
+    label: "Social media management",
+    className: "text-dusty-green",
+  },
+  {
+    icon: "activity",
+    label: "SEO services or retainers",
+    className: "text-neutral-400",
+  },
+  {
+    icon: "dollar",
+    label: "Advertising or paid media",
+    className: "text-primary",
+  },
+  {
+    icon: "laptop",
+    label: "Custom software development",
+    className: "text-neutral-400",
+  },
+] as const;
 
 export function InlineIllustrationIcon() {
   return (
@@ -15,36 +38,19 @@ export function InlineIllustrationIcon() {
       </h2>
       <div className="relative mt-6 flex flex-col gap-4 pl-7">
         <DashedConnector />
-        <p
-          className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
-        >
-          <IconBrandSlack className="size-4 stroke-[1.5] text-red-500" />
-          Marketing consulting
-        </p>
-        <p
-          className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
-        >
-          <IconBrandStripe className="size-4 stroke-[1.5] text-blue-500" />
-          Social media management
-        </p>
-        <p
-          className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
-        >
-          <IconBrandVscode className="size-4 stroke-[1.5] text-neutral-400" />
-          SEO services or retainers
-        </p>
-        <p
-          className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
-        >
-          <IconBrandFigma className="size-4 stroke-[1.5] text-indigo-500" />
-          Advertising or paid media
-        </p>
-        <p
-          className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
-        >
-          <IconBrandVscode className="size-4 stroke-[1.5] text-neutral-400" />
-          Custom software development
-        </p>
+        {items.map((item) => (
+          <p
+            key={item.label}
+            className="flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs text-neutral-400 shadow-sm ring-1 shadow-black/10 ring-white/10"
+          >
+            <SiteIcon
+              name={item.icon}
+              size={16}
+              className={item.className}
+            />
+            {item.label}
+          </p>
+        ))}
       </div>
     </div>
   );

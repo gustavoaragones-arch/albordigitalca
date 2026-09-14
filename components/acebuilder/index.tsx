@@ -6,7 +6,7 @@ import {
   ThunderIcon,
   UpArrowIcon,
 } from "@/components/icons/general";
-import { ChevronDown } from "lucide-react";
+import { SiteIcon } from "@/components/ui/site-icon";
 
 const logos = [
   "/logos/claude.webp",
@@ -60,7 +60,11 @@ export const Acebuilder = () => {
                     <span className="text-muted-foreground text-sm leading-5.5 font-medium">
                       Claude 3.7 Sonnet
                     </span>
-                    <ChevronDown className="text-muted-foreground size-3.5" />
+                    <SiteIcon
+                      name="arrow-down-right"
+                      size={14}
+                      className="text-muted-foreground"
+                    />
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

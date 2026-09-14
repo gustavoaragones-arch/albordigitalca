@@ -1,5 +1,5 @@
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import { SiteIcon } from "@/components/ui/site-icon"
 
 import { cn } from "@/lib/utils"
 
@@ -39,13 +39,17 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon
+        <SiteIcon
+          name="arrow-down-right"
+          size={24}
           data-slot="accordion-trigger-icon"
-          className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
+          className="pointer-events-none shrink-0 text-muted-foreground group-aria-expanded/accordion-trigger:hidden"
         />
-        <ChevronUpIcon
+        <SiteIcon
+          name="arrow-up-right"
+          size={24}
           data-slot="accordion-trigger-icon"
-          className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
+          className="pointer-events-none hidden shrink-0 text-muted-foreground group-aria-expanded/accordion-trigger:inline"
         />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

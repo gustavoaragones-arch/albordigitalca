@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useId } from "react";
-import { IconMailFilled } from "@tabler/icons-react";
+import { SiteIcon } from "@/components/ui/site-icon";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
@@ -19,7 +19,7 @@ export function ContactFormGridWithDetails() {
       <div className="relative flex flex-col items-center lg:items-start">
         <div className="flex items-start justify-start">
           <FeatureIconContainer className="flex items-center justify-center overflow-hidden">
-            <IconMailFilled className="h-6 w-6 text-blue-500" />
+            <SiteIcon name="mail-out" size={24} className="text-primary" />
           </FeatureIconContainer>
         </div>
         <h2 className="mt-9 bg-gradient-to-b from-neutral-800 to-neutral-900 bg-clip-text text-left text-xl font-bold text-transparent md:text-3xl lg:text-5xl dark:from-neutral-200 dark:to-neutral-300">

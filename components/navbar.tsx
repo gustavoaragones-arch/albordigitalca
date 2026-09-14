@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/button";
 import { useEffect, useState } from "react";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { SiteIcon } from "@/components/ui/site-icon";
 import { Logo } from "@/components/logo";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -84,16 +84,18 @@ export const Navbar = ({ className }: { className?: string | undefined }) => {
               className="p-2 text-white/80 hover:text-white"
             >
               {isMenuOpen ? (
-                <IconX
+                <SiteIcon
+                  name="slash-square"
+                  size={24}
                   className={cn(
-                    "size-6",
                     isDarkMode ? "text-natural-white" : "text-natural-black",
                   )}
                 />
               ) : (
-                <IconMenu2
+                <SiteIcon
+                  name="dots-grid3x3"
+                  size={24}
                   className={cn(
-                    "size-6",
                     isDarkMode ? "text-natural-white" : "text-natural-black",
                   )}
                 />
@@ -119,7 +121,11 @@ export const Navbar = ({ className }: { className?: string | undefined }) => {
                   className="p-2 text-natural-white/80 hover:text-natural-white"
                   aria-label="Close menu"
                 >
-                  <IconX className="size-6 text-natural-white" />
+                  <SiteIcon
+                    name="slash-square"
+                    size={24}
+                    className="text-natural-white"
+                  />
                 </button>
               </div>
               <div className="flex flex-1 flex-col gap-1 px-4 pt-4">

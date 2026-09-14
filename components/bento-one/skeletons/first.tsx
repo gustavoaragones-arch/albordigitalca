@@ -1,5 +1,5 @@
 import { SquareDots } from "@/components/square-dots";
-import { IconPhotoScan } from "@tabler/icons-react";
+import { SiteIcon } from "@/components/ui/site-icon";
 import { motion } from "motion/react";
 import React from "react";
 
@@ -118,7 +118,11 @@ export const SkeletonOne = () => {
                 transition={{ duration: 0.4, delay: 0.9 }}
                 className="mt-3 flex h-full w-3/4 items-center justify-center rounded-sm bg-gray-100"
               >
-                <IconPhotoScan className="size-6 text-neutral-400" />
+                <SiteIcon
+                  name="orthogonal-view"
+                  size={24}
+                  className="text-muted-foreground"
+                />
               </motion.div>
             </div>
           </motion.div>

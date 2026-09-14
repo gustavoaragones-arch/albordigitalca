@@ -2,21 +2,24 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { IconBrandGithubFilled } from "@tabler/icons-react";
 import Image from "next/image";
-import { SlackIcon } from "@/icons/brand";
+import { SiteIcon } from "@/components/ui/site-icon";
 
 export const SkeletonTwo = () => {
   const cards = [
     {
       title: "Revision Completed",
       badge: "notification",
-      icon: <SlackIcon className="size-4" />,
+      icon: (
+        <SiteIcon name="multi-bubble" size={16} className="text-dusty-green" />
+      ),
     },
     {
       title: "HOTFIX: update design",
       badge: "notification",
-      icon: <IconBrandGithubFilled className="size-4" />,
+      icon: (
+        <SiteIcon name="agile" size={16} className="text-heading" />
+      ),
     },
     {
       title: "Design Finalized",
