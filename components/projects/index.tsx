@@ -8,11 +8,12 @@ import { cn } from "@/lib/utils";
 
 const MotionLink = motion.create(Link);
 
+import { Button } from "@/components/button";
 import { Container } from "@/components/container";
 import { RightArrow } from "@/components/icons/general";
 import { PageHeader } from "@/components/page-header";
 
-type Project = {
+export type Project = {
   src: string;
   alt: string;
   width: number;
@@ -28,7 +29,7 @@ type Project = {
 };
 
 // PLACEHOLDER: Replace with real client work when available.
-const projects = [
+const defaultProjects = [
   {
     src: "/assets/project-1.webp",
     alt: "Small business website design for hospitality business in Canmore Alberta",
@@ -106,15 +107,21 @@ const overlayItemVariants: Variants = {
 
 export const Projects = ({
   disabelHeader = false,
+  headerTitle = "Featured Work",
+  projects = defaultProjects,
+  ctaLabel,
 }: {
   disabelHeader?: boolean;
+  headerTitle?: string;
+  projects?: Project[];
+  ctaLabel?: string;
 }) => {
   return (
     <section className="w-full">
       <Container className="relative flex w-full flex-col gap-20 overflow-hidden pt-40 pb-20 md:pt-65 md:pb-30 lg:pt-80 lg:pb-30">
         {!disabelHeader && (
           <div>
-            <PageHeader>Featured Work</PageHeader>
+            <PageHeader>{headerTitle}</PageHeader>
           </div>
         )}
         {/* grids */}
@@ -173,6 +180,11 @@ export const Projects = ({
             </MotionLink>
           ))}
         </div>
+        {ctaLabel && (
+          <div className="z-10 flex justify-center">
+            <Button text={ctaLabel} showAvatar={false} />
+          </div>
+        )}
       </Container>
     </section>
   );
