@@ -8,13 +8,12 @@ export const Metrics = () => {
   const [value, setValue] = useState(1);
 
   useEffect(() => {
-    if (value === 6) return;
-
     const interval = setInterval(() => {
-      setValue((prev) => prev + 1);
-    }, 10);
+      setValue((prev) => (prev >= 4 ? 1 : prev + 1));
+    }, 1500);
+
     return () => clearInterval(interval);
-  }, [value]);
+  }, []);
 
   return (
     <div className="flex h-full flex-col justify-between gap-16 p-8">

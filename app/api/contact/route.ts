@@ -1,3 +1,4 @@
+import { sendContactEmail } from "@/lib/contact-email";
 import { NextResponse } from "next/server";
 
 type ContactPayload = {
@@ -56,10 +57,29 @@ export async function POST(request: Request) {
     );
   }
 
-  // FORM ACTION: Wire to email service before launch.
+  try {
+    await sendContactEmail({
+      name,
+      email,
+      company,
+      projectType,
+      message,
+    });
+  } catch (error) {
+    console.error("Contact form email failed:", error);
+    return NextResponse.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Unable to send your message. Please email hello@albordigital.ca directly.",
+      },
+      { status: 500 },
+    );
+  }
+
   return NextResponse.json({
     success: true,
-    message: "Message received. We will respond within one business day.",
-    data: { name, email, company, projectType, message },
+    message: "Message sent. We will respond within one business day.",
   });
 }

@@ -55,14 +55,9 @@ export function ContactFormGridWithDetails() {
   return (
     <section className="w-full">
       <Container className="relative z-10 flex w-full flex-col overflow-hidden pt-40 pb-20 md:pt-65 md:pb-30 lg:overflow-visible lg:pt-80 lg:pb-30">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="relative flex flex-col items-center lg:items-start">
-            <div className="flex items-start justify-start">
-              <FeatureIconContainer className="flex items-center justify-center overflow-hidden">
-                <SiteIcon name="mail-out" size={24} className="text-primary" />
-              </FeatureIconContainer>
-            </div>
-            <h2 className="mt-9 text-left text-2xl leading-8 font-medium text-black">
+            <h2 className="w-full text-left text-2xl leading-8 font-medium text-black">
               Start Your Project
             </h2>
             <p className="mt-4 max-w-lg text-center text-base text-neutral-600 md:text-left">

@@ -80,6 +80,23 @@ const defaultProjects = [
     impact:
       "Placeholder project — details to be updated with real client work.",
   },
+  // PLACEHOLDER: Replace with real client work when available.
+  {
+    src: "/assets/project-4.webp",
+    alt: "Launch website for new retail business in Banff Alberta",
+    width: 1824,
+    height: 1320,
+    className: "col-span-14 md:col-span-7 lg:col-span-7",
+    title: "Business Launch Website — Retail, Banff AB",
+    summary:
+      "A launch-ready website for a new Bow Valley retail business. Built to go live before opening day with clear messaging and a mobile-first experience.",
+    client: "Retail, Banff AB",
+    category: "Website Design",
+    timeline: "3 weeks",
+    deliverables: ["Launch pages", "Mobile design", "Go-live support"],
+    impact:
+      "Placeholder project — details to be updated with real client work.",
+  },
 ] satisfies Project[];
 
 const overlayVariants: Variants = {

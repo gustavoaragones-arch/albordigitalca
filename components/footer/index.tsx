@@ -32,9 +32,9 @@ const data = {
 export const Footer = () => {
   return (
     <footer className="bg-natural-black relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 h-293.75 w-[min(720px,140vw)] -translate-x-1/4 rounded-full bg-[#27251F] blur-[287.15px] md:left-[387.07px] md:w-[720.16px] md:translate-x-0" />
-        <div className="absolute top-[284.85px] left-0 h-[min(502px,120vw)] w-[min(488px,120vw)] rounded-full bg-white blur-[215.36px]" />
+      <div className="absolute inset-0 -left-128.75">
+        <div className="absolute top-0 left-[387.07px] h-293.75 w-[720.16px] rounded-full bg-[#27251F] blur-[287.15px]" />
+        <div className="absolute top-[284.85px] left-0 h-[502.50px] w-[488.15px] rounded-full bg-white blur-[215.36px]" />
       </div>
       <Container className="flex flex-col gap-30 pt-20 pb-10">
         <div className="bg-natural-white/5 shadow-card-xl relative h-112 overflow-hidden rounded-4xl">
