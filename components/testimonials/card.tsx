@@ -9,7 +9,7 @@ export const TestimonialsCard = forwardRef<HTMLDivElement, Testimonial>(function
   ref,
 ) {
   return (
-    <div ref={ref} className="bg-natural-white shadow-card-lg flex min-h-full w-full shrink-0 flex-col items-start justify-start gap-12 overflow-hidden rounded-3xl px-8 pt-8 pb-6 md:w-147">
+    <div ref={ref} className="bg-natural-white shadow-card-lg flex min-h-full w-full shrink-0 basis-full flex-col items-start justify-start gap-12 overflow-hidden rounded-3xl px-8 pt-8 pb-6 md:basis-auto md:w-147">
       <div className="flex w-full items-center justify-between">
         <Image
           className="w-20 object-contain"

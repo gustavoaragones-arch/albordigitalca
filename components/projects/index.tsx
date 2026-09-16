@@ -128,7 +128,7 @@ export const Projects = ({
         <div
           className={cn(
             "z-10 grid grid-cols-14 gap-6",
-            "[--card-height:440px]",
+            "[--card-height:min(72vw,320px)] sm:[--card-height:380px] lg:[--card-height:440px]",
             "*:data-[slot='card']:max-h-(--card-height) *:data-[slot='card']:min-h-(--card-height) *:data-[slot='card']:overflow-hidden *:data-[slot='card']:rounded-3xl",
           )}
         >

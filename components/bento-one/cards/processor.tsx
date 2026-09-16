@@ -7,7 +7,7 @@ export const Processor = () => {
   return (
     <div
       className={cn(
-        "relative ml-4 h-[314px] w-[336px] scale-110 overflow-hidden",
+        "relative mx-auto h-[280px] w-full max-w-[336px] overflow-hidden sm:ml-4 sm:h-[314px] sm:scale-110",
         "mask-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_50%)]",
       )}
     >

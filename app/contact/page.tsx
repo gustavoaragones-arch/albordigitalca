@@ -18,7 +18,7 @@ export const metadata = getSEO({
 
 const ContactPage = () => {
   return (
-    <div className="max-w-screen overflow-x-visible">
+    <div className="max-w-screen overflow-x-hidden">
       <Container className="relative h-38 md:h-70">
         <PageHeader className="top-10 md:top-16 lg:top-18">Contact</PageHeader>
       </Container>

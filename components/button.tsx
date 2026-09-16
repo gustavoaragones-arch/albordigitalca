@@ -1,23 +1,28 @@
 "use client";
 
+import { CONTACT_PATH } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Button = ({
   text = "Start Your Project",
+  href = CONTACT_PATH,
   showAvatar = true,
   containerClassName,
   avatar,
 }: {
   text?: string;
+  href?: string;
   showAvatar?: boolean;
   containerClassName?: string;
   avatar?: string;
 }) => {
+  const linkHref = text === "Start Your Project" ? CONTACT_PATH : href;
+
   return (
     <Link
-      href="/contact"
+      href={linkHref}
       className={cn(
         "group relative flex w-fit cursor-pointer items-center gap-2 rounded-lg border border-white/20 bg-black py-2 pr-4 pl-11 tracking-tight",
         containerClassName,

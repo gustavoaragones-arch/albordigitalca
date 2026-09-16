@@ -54,7 +54,7 @@ const whatHappensNext = [
 export function ContactFormGridWithDetails() {
   return (
     <section className="w-full">
-      <Container className="relative z-10 flex w-full flex-col overflow-visible pt-40 pb-20 md:pt-65 md:pb-30 lg:pt-80 lg:pb-30">
+      <Container className="relative z-10 flex w-full flex-col overflow-hidden pt-40 pb-20 md:pt-65 md:pb-30 lg:overflow-visible lg:pt-80 lg:pb-30">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
           <div className="relative flex flex-col items-center lg:items-start">
             <div className="flex items-start justify-start">
@@ -78,7 +78,7 @@ export function ContactFormGridWithDetails() {
               className="mt-8"
             />
 
-            <div className="mt-10 hidden flex-col items-center gap-4 md:flex-row lg:flex">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap lg:flex">
               <a
                 href="mailto:hello@albordigital.ca"
                 className="text-sm text-neutral-500 hover:text-neutral-700"
@@ -92,15 +92,15 @@ export function ContactFormGridWithDetails() {
 
               <p className="text-sm text-neutral-500">Canadian-owned</p>
             </div>
-            <div className="relative mt-20 flex w-full -translate-x-[60px] items-start justify-start overflow-visible [perspective:800px] [transform-style:preserve-3d]">
-              <Pin className="-top-[38px] left-[-57px] sm:-top-[42px]" />
+            <div className="relative mt-20 flex w-full max-w-full -translate-x-4 items-start justify-start overflow-hidden sm:-translate-x-8 md:-translate-x-12 lg:-translate-x-[60px] lg:overflow-visible [perspective:800px] [transform-style:preserve-3d]">
+              <Pin className="-top-8 left-0 sm:-top-[38px] sm:left-[-57px] lg:-top-[42px]" />
 
               <img
                 src="/world.svg"
                 width={500}
                 height={500}
                 alt="World map"
-                className="origin-top-left [transform:rotateX(45deg)_translateZ(0px)_scale(1.5)]"
+                className="origin-top-left [transform:rotateX(45deg)_translateZ(0px)_scale(1.05)] sm:[transform:rotateX(45deg)_translateZ(0px)_scale(1.2)] lg:[transform:rotateX(45deg)_translateZ(0px)_scale(1.5)]"
                 style={{
                   filter:
                     "brightness(0) saturate(100%) invert(32%) sepia(93%) saturate(2476%) hue-rotate(250deg) brightness(91%) contrast(96%)",

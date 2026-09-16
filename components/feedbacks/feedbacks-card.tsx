@@ -17,7 +17,7 @@ export const FeedbacksCard = forwardRef<
   return (
     <div
       ref={ref}
-      className="bg-natural-black text-natural-white relative flex min-h-full w-full shrink-0 flex-col gap-30 overflow-hidden rounded-3xl p-8 lg:w-170"
+      className="bg-natural-black text-natural-white relative flex min-h-full w-full shrink-0 basis-full flex-col gap-30 overflow-hidden rounded-3xl p-8 lg:basis-auto lg:w-170"
     >
       <div
         className={cn(

@@ -42,7 +42,7 @@ export default function RootLayout({
           inter.variable,
           geistMono.variable,
           DMMono.variable,
-          `bg-background relative font-sans antialiased`,
+          "bg-background relative overflow-x-hidden font-sans antialiased",
         )}
       >
         <Navbar />

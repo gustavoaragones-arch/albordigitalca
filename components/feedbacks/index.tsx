@@ -76,9 +76,9 @@ export const Feedbacks = () => {
           </div>
         </div>
         <div className="flex flex-col gap-10">
-          <div>
+          <div className="w-full overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-out will-change-transform gap-6"
+              className="flex gap-6 transition-transform duration-500 ease-out will-change-transform"
               style={{
                 transform: `translate3d(-${activeIndex * slideDistance}px, 0, 0)`,
               }}

@@ -94,7 +94,7 @@ export const Testimonials = () => {
           <Button text="Start Your Project" />
         </div>
         <div className="flex flex-col gap-10">
-          <div className="_overflow-hidden">
+          <div className="w-full overflow-hidden">
             <div
               className="flex gap-6 transition-transform duration-500 ease-out will-change-transform"
               style={{

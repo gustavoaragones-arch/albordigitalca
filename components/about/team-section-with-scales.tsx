@@ -28,7 +28,7 @@ export function TeamSectionWithScales() {
       </h2>
       <div className="mt-8 grid grid-cols-1 justify-items-start gap-4 md:mt-12 md:grid-cols-2 md:gap-12">
         {team.map((member) => (
-          <div key={member.title} className="group/team w-[70%]">
+          <div key={member.title} className="group/team w-full sm:w-[70%]">
             <div
               className="relative overflow-hidden rounded-2xl bg-neutral-200/50 transition duration-200 dark:bg-neutral-950"
             >
